@@ -1,0 +1,344 @@
+/* Estilos Gerais */
+body {
+  font-family: Arial, sans-serif; /* Define a fonte da página */
+  margin: 0; /* Remove margens da página */
+  padding: 0; /* Remove preenchimento da página */
+  background-color: #f4f4f4; /* Define a cor de fundo */
+  overflow-x: hidden; /* Evita rolagem horizontal indesejada */
+  height: 100vh; /* Define a altura do body para ocupar toda a janela */
+  overflow-y: auto; /* Permite rolagem vertical */
+}
+
+.main-content {
+  min-height: 100vh; /* Garante que a área principal tenha pelo menos a altura da tela */
+  padding: 20px; /* Preenchimento interno para o conteúdo */
+  overflow-y: auto; /* Permite a rolagem do conteúdo, se necessário */
+}
+
+h1,
+p {
+  text-align: center; /* Centraliza texto de cabeçalhos e parágrafos */
+  margin: 30px 0; /* Define margem vertical para cabeçalhos e parágrafos */
+}
+
+a {
+  text-decoration: none; /* Remove o sublinhado de links */
+  color: inherit; /* Herda a cor do texto pai */
+}
+
+button {
+  padding: 10px 20px; /* Preenchimento interno do botão */
+  border: none; /* Remove bordas do botão */
+  background-color: #570101; /* Define a cor de fundo do botão */
+  color: white; /* Define a cor do texto do botão */
+  cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+  font-size: 1rem; /* Define o tamanho da fonte */
+  border-radius: 5px; /* Adiciona cantos arredondados ao botão */
+  display: block; /* Torna o botão um bloco para aplicar a margem */
+  margin: 0 auto; /* Centraliza o botão horizontalmente */
+  transition: background-color 0.3s ease; /* Adiciona uma transição suave */
+}
+
+button:disabled {
+  background-color: #d3d3d3; /* Cor de fundo para botões desativados */
+}
+
+button:hover:not(:disabled) {
+  background-color: #927373; /* Muda a cor de fundo ao passar o mouse (botões ativos) */
+}
+
+header {
+  display: flex; /* Usa flexbox para o cabeçalho */
+  justify-content: space-between; /* Espaça os itens do cabeçalho */
+  align-items: center; /* Alinha itens verticalmente ao centro */
+  background-color: #570101; /* Cor de fundo do cabeçalho */
+  padding: 10px 20px; /* Preenchimento interno do cabeçalho */
+  color: white; /* Cor do texto no cabeçalho */
+}
+
+.logo img {
+  width: 150px; /* Largura da logo */
+  height: auto; /* Permite redimensionamento automático */
+}
+
+.header-buttons {
+  display: flex; /* Usa flexbox para os botões do cabeçalho */
+  gap: 10px; /* Espaço entre os botões */
+}
+
+.header-buttons button {
+  background-color: white; /* Cor de fundo dos botões na seção de cabeçalho */
+  color: #000000; /* Cor do texto dos botões */
+  font-weight: bold; /* Define o peso da fonte como negrito */
+  border-radius: 20px; /* Canto arredondado para os botões */
+  padding: 10px 20px; /* Preenchimento interno dos botões */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Adiciona transições suaves */
+}
+
+.star-icon {
+  font-size: 1rem; /* Tamanho do ícone de estrela */
+}
+
+.rating-text {
+  font-size: 1rem; /* Tamanho do texto de avaliação */
+}
+
+nav ul {
+  list-style: none; /* Remove marcadores de lista */
+  display: flex; /* Usa flexbox para a lista de navegação */
+  justify-content: center; /* Centraliza os itens da lista */
+  gap: 20px; /* Espaço entre os itens da lista */
+  padding: 0; /* Remove preenchimento da lista */
+  margin: 0; /* Remove margens desnecessárias */
+}
+
+nav ul li a {
+  font-size: 1.5rem; /* Tamanho da fonte dos links da lista */
+  color: #570101; /* Cor do texto dos links */
+  transition: color 0.3s ease; /* Transição suave de cor */
+}
+
+nav ul li a:hover {
+  color: #ffffff; /* Cor do texto ao passar o mouse sobre os links */
+}
+
+/* Ícones e Conteúdo */
+.icons-container {
+  display: flex; /* Ativa o flexbox para o contêiner de ícones */
+  justify-content: center; /* Centraliza ícones horizontalmente */
+  align-items: center; /* Alinha ícones verticalmente */
+  gap: 20px; /* Espaço entre os ícones, menor para melhor distribuição */
+  margin: 20px 0; /* Margem acima e abaixo do contêiner de ícones */
+  flex-wrap: wrap; /* Permite que ícones quebrem linha em telas menores */
+}
+
+.icon-item {
+  text-align: center; /* Centraliza o texto dentro do item de ícone */
+  transition: transform 0.3s ease, color 0.3s ease; /* Suave transição ao interagir com o ícone */
+}
+
+.icon-item:hover {
+  transform: translateY(
+    -5px
+  ); /* Pequeno efeito de "flutuar" ao passar o mouse */
+  color: #990000; /* Altera a cor do texto ao interagir */
+}
+
+.icon-item i {
+  font-size: 2.5rem; /* Aumenta o tamanho do ícone para maior destaque */
+  color: #570101; /* Cor do ícone */
+  transition: color 0.3s ease; /* Suave transição de cor */
+}
+
+.icon-item i:hover {
+  color: #ff3333; /* Altera a cor do ícone ao passar o mouse */
+}
+
+.icon-item span {
+  display: block; /* Permite que o texto abaixo do ícone ocupe toda a largura */
+  margin-top: 8px; /* Margem ligeiramente reduzida acima do texto */
+  font-size: 1.1rem; /* Ajusta o tamanho do texto abaixo do ícone */
+  color: #333; /* Cor do texto abaixo do ícone */
+}
+
+.address {
+  text-align: center; /* Centraliza o texto do endereço */
+  margin-top: 15px; /* Margem ajustada para melhor espaçamento */
+  font-size: 1.2rem; /* Tamanho da fonte do endereço */
+  color: #222; /* Cor mais suave para o texto do endereço */
+}
+
+.modal {
+  display: none; /* Oculta o modal por padrão */
+  position: fixed; /* Fixa o modal na tela */
+  top: 0; /* Posiciona o modal no topo da tela */
+  left: 0; /* Posiciona o modal à esquerda da tela */
+  width: 100%; /* Largura total do modal */
+  height: 100%; /* Altura total do modal */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.7
+  ); /* Fundo escuro com transparência sutil para melhor legibilidade */
+  justify-content: center; /* Centraliza o conteúdo do modal horizontalmente */
+  align-items: center; /* Centraliza o conteúdo do modal verticalmente */
+  backdrop-filter: blur(7px); /* Efeito de desfoque mais suave no fundo */
+  z-index: 1000; /* Eleva o modal acima de outros elementos da página */
+  transition: opacity 0.3s ease-in-out; /* Transição suave na exibição */
+}
+
+.modal-content {
+  background: linear-gradient(
+    145deg,
+    #ffffff,
+    #eaeaea
+  ); /* Gradiente suave e moderno */
+  padding: 25px; /* Preenchimento interno mais espaçado */
+  border-radius: 15px; /* Bordas arredondadas mais discretas */
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3); /* Sombra mais suave para dar profundidade */
+  max-width: 600px; /* Largura máxima do conteúdo do modal */
+  width: 90%; /* Largura ajustável para dispositivos menores */
+  color: #333; /* Cor do texto mais suave */
+  font-family: "Roboto", sans-serif; /* Fonte mais moderna */
+  max-height: 85vh; /* Aumenta a altura máxima do modal */
+  overflow-y: auto; /* Adiciona barra de rolagem se necessário */
+  transition: transform 0.3s ease-in-out; /* Transição suave para exibição */
+}
+
+.modal-header {
+  display: flex; /* Usa flexbox para o cabeçalho do modal */
+  justify-content: space-between; /* Espaça itens do cabeçalho do modal */
+  align-items: center; /* Alinha itens verticalmente ao centro */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Linha inferior suave */
+  padding-bottom: 10px; /* Espaçamento inferior */
+}
+
+.modal-title {
+  font-size: 2rem; /* Tamanho da fonte do título do modal para melhor legibilidade */
+  color: #222; /* Cor do título */
+}
+
+.close {
+  font-size: 1.6rem; /* Tamanho da fonte do botão de fechar */
+  cursor: pointer; /* Muda o cursor ao passar sobre o botão de fechar */
+  color: #990000; /* Cor inicial do botão de fechar */
+  transition: color 0.3s ease; /* Transição suave de cor */
+}
+
+.close:hover {
+  color: #ff3333; /* Cor mais vibrante ao passar o mouse */
+}
+
+/* Estilos do corpo do modal */
+.modal-body {
+  padding: 20px 0; /* Espaçamento no corpo do modal */
+  background-color: #f9f9f9; /* Fundo claro para contraste */
+  border-radius: 8px; /* Bordas arredondadas para um visual mais suave */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil para destacar o modal */
+}
+
+.modal-body ul {
+  list-style: none; /* Remove marcadores de lista no corpo do modal */
+  padding: 0; /* Remove preenchimento do corpo do modal */
+  margin: 0; /* Remove margens indesejadas */
+}
+
+.modal-body ul li {
+  padding: 10px 15px; /* Espaçamento interno dos itens da lista */
+  border-bottom: 1px solid #ddd; /* Linha separadora entre os itens */
+}
+
+.modal-body ul li:last-child {
+  border-bottom: none; /* Remove a linha do último item da lista */
+}
+
+.close {
+  font-size: 1.5rem; /* Tamanho da fonte do botão de fechar */
+  cursor: pointer; /* Muda o cursor ao passar sobre o botão de fechar */
+  color: #570101; /* Cor do botão de fechar */
+}
+
+/* Ícones Sociais */
+.social-icons {
+  display: flex; /* Usa flexbox para os ícones sociais */
+  justify-content: center; /* Centraliza os ícones horizontalmente */
+  align-items: center; /* Alinha os ícones verticalmente */
+  gap: 25px; /* Espaço entre os ícones sociais */
+  padding: 10px 0; /* Margem para dar espaço ao redor */
+  flex-direction: row; /* Alinha os ícones sociais em linha */
+}
+
+.social-icons li {
+  list-style: none; /* Remove marcadores de lista dos ícones sociais */
+  display: inline-block; /* Garante que os ícones fiquem lado a lado */
+}
+
+.social-icons a {
+  font-size: 2rem; /* Tamanho da fonte dos ícones sociais */
+  color: #570101; /* Cor do texto dos ícones sociais */
+}
+
+.social-icons a:hover {
+  color: #ffffff; /* Cor ao passar o mouse sobre os ícones sociais */
+}
+
+/* Melhorias para Mobile */
+@media (max-width: 768px) {
+  body {
+    font-size: 0.9rem; /* Reduz o tamanho da fonte globalmente em telas menores */
+  }
+
+  header {
+    /* Alinha itens do cabeçalho em coluna em telas menores */
+    padding: 20px; /* Aumenta o preenchimento para maior espaçamento */
+    text-align: center; /* Centraliza texto do cabeçalho */
+  }
+
+  .logo img {
+    width: 150px; /* Ajusta o tamanho da logo em dispositivos móveis */
+  }
+
+  .header-buttons {
+    display: flex; /* Ativa o flexbox para os botões do cabeçalho */
+    margin-top: 1px; /* Maior espaçamento superior nos botões do cabeçalho */
+    gap: 10px; /* Aumenta o espaço entre os botões */
+    flex-direction: column; /* Botões lado a lado */
+    justify-content: center; /* Centraliza os botões */
+  }
+
+  .header-buttons button {
+    background-color: #f4f4f4; /* Cor de fundo dos botões na seção de cabeçalho */
+    color: #000000; /* Cor do texto dos botões */
+    font-weight: bold; /* Define o peso da fonte como negrito */
+    border-radius: 20px; /* Canto arredondado para os botões */
+    padding: 8px 20px; /* Preenchimento interno dos botões */
+    display: flex; /* Ativa o flexbox para alinhar ícones e texto */
+    align-items: center; /* Alinha itens verticalmente ao centro */
+  }
+
+  button {
+    width: 100%; /* Botões ocupam toda a largura */
+    padding: 12px; /* Aumenta o preenchimento dos botões para serem mais "tocáveis" */
+    font-size: 1rem; /* Tamanho da fonte dos botões */
+  }
+
+  nav ul {
+    flex-direction: column; /* Alinha itens da lista de navegação em coluna */
+    gap: 15px; /* Aumenta o espaço entre os itens da lista de navegação */
+    margin-top: 20px; /* Espaçamento adicional acima do menu */
+  }
+
+  nav ul li a {
+    font-size: 1.2rem; /* Reduz um pouco o tamanho dos links para navegação em mobile */
+  }
+
+  .icons-container {
+    flex-direction: row; /* Mantém os ícones lado a lado */
+    gap: 20px; /* Ajusta o espaçamento entre os ícones */
+    padding: 10px 0; /* Adiciona espaçamento adicional no container dos ícones */
+  }
+
+  .icon-item i {
+    font-size: 1.8rem; /* Diminui um pouco o tamanho dos ícones para mobile */
+  }
+
+  .icon-item span {
+    font-size: 1rem; /* Reduz o tamanho do texto abaixo dos ícones */
+  }
+
+  .address {
+    font-size: 1rem; /* Diminui o tamanho do texto do endereço */
+    margin-top: 10px; /* Reduz o espaçamento superior do endereço */
+  }
+
+  main {
+    padding: 20px; /* Aumenta o preenchimento interno na área principal */
+  }
+
+  .modal-content {
+    width: 95%; /* Garante que o modal ocupe quase toda a largura em dispositivos móveis */
+    max-width: 300px; /* Define um limite de largura para o modal em telas menores */
+    padding: 15px; /* Ajusta o espaçamento interno do modal */
+  }
+}

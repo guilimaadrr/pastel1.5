@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Venda de Pastel</title>
+    <link rel="stylesheet" href="menu.css" />
+    <script defer src="menu.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="img/Cantinhologo.png" alt="Logo Pastel" />
+      </div>
+      <div class="header-buttons">
+        <button id="rating-button" disabled aria-label="Avaliação 4.9">
+          <span class="star-icon">⭐</span>
+          <span class="rating-text">4.9 </span>
+        </button>
+        <button
+          id="status-button"
+          onclick="toggleStatus()"
+          aria-label="Status da loja"
+        >
+          🟢Aberto
+        </button>
+      </div>
+    </header>
+
+    <nav aria-label="Redes sociais">
+      <ul class="social-icons">
+        <li>
+          <a
+            href="https://wa.me/5581994956795"
+            target="_blank"
+            aria-label="WhatsApp"
+          >
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://instagram.com/cantiinho_dopastel"
+            target="_blank"
+            aria-label="Instagram"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <main>
+      <h1>🤩Bem-vindos🤩</h1>
+      <p>Tenha a melhor experiência conosco</p>
+      <div class="icons-container">
+        <div class="icon-item">
+          <i class="fas fa-store fa-2x"></i>
+          <span>No local</span>
+        </div>
+        <div class="icon-item">
+          <i class="fas fa-utensils fa-2x"></i>
+          <span>Retirar na Loja</span>
+        </div>
+        <div class="icon-item">
+          <i class="fas fa-motorcycle fa-2x"></i>
+          <span>Delivery</span>
+        </div>
+      </div>
+
+      <button id="menu-button" onclick="abrirMenu()" aria-label="Abrir menu">
+        MENU
+      </button>
+      <div class="address">
+        <p>
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=Rua+Manuel+Salvador,+229,+Recife"
+            target="_blank"
+          >
+            📍 Rua Manuel Salvador, 229, Recife
+          </a>
+        </p>
+      </div>
+    </main>
+
+    <div id="status-modal" class="modal" aria-hidden="true" role="dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title">CANTINHO DO PASTEL</h2>
+          <span class="close" onclick="closeModal()" aria-label="Fechar"
+            >&times;</span
+          >
+        </div>
+        <div class="modal-body">
+          <h3><strong>Endereço:</strong></h3>
+          <p>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Rua+Manuel+Salvador,+229,+Recife"
+              target="_blank"
+            >
+              📍 Rua Manuel Salvador, 229, Recife
+            </a>
+          </p>
+
+          <h3><strong>Funcionamento:</strong></h3>
+          <ul>
+            <li>20:00 - 23:00 (Ter-Sáb)</li>
+          </ul>
+
+          <h3>Serviços:</h3>
+          <ul class="servicos-list">
+            <li>No Local</li>
+            <li>Retirar na loja</li>
+            <li>Delivery</li>
+          </ul>
+
+          <h3>Abrangência da Entrega:</h3>
+          <ul>
+            <li>Areias</li>
+            <li>Barro</li>
+            <li>Boa Viagem</li>
+            <li>Boa Vista</li>
+            <li>Bongi</li>
+            <li>Casa Amarela</li>
+            <li>Caxangá</li>
+            <li>Cidade Universitária</li>
+            <li>Curado</li>
+            <li>Derby</li>
+            <li>Engenho do Meio</li>
+            <li>Espinheiro</li>
+            <li>Estância</li>
+            <li>Ibura</li>
+            <li>Imbiribeira</li>
+            <li>Ipsep</li>
+            <li>Jardim São Paulo</li>
+            <li>Madalena</li>
+            <li>Mustardinha</li>
+            <li>Sancho</li>
+            <li>Tejipió</li>
+            <li>Torrões</li>
+            <li>Totó</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="menu.js"></script>
+  </body>
+</html>
